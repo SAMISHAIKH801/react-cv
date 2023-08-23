@@ -1,0 +1,46 @@
+[debug] [2023-08-23T15:16:42.278Z] ----------------------------------------------------------------------
+[debug] [2023-08-23T15:16:42.284Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Malik Ijaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-08-23T15:16:42.285Z] CLI Version:   12.5.0
+[debug] [2023-08-23T15:16:42.286Z] Platform:      win32
+[debug] [2023-08-23T15:16:42.286Z] Node Version:  v18.16.0
+[debug] [2023-08-23T15:16:42.288Z] Time:          Wed Aug 23 2023 08:16:42 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-08-23T15:16:42.289Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-23T15:16:42.310Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-23T15:16:42.312Z] > authorizing via signed-in user (samishaikhabid@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Malik Ijaz\Desktop\cv with react\cv-assignment
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-08-23T15:17:34.498Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-08-23T15:17:34.499Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"sami-reactapp","name":"sami-reactapp"}
+[debug] [2023-08-23T15:17:36.445Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-08-23T15:17:36.447Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5548718813214178778"}
+[debug] [2023-08-23T15:17:36.450Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5548718813214178778 [none]
+[debug] [2023-08-23T15:17:38.076Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5548718813214178778 200
+[debug] [2023-08-23T15:17:38.076Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5548718813214178778 {"name":"operations/cp.5548718813214178778","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":8,"message":"The project cannot be created because you have exceeded your allotted project quota.","details":[{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"description":"The project cannot be created because you have exceeded your allotted project quota."}]}]}}
+[debug] [2023-08-23T15:17:38.514Z] FirebaseError: The project cannot be created because you have exceeded your allotted project quota.
+    at OperationPoller.poll (C:\Users\Malik Ijaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (C:\Users\Malik Ijaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:186:29)
+    at async createFirebaseProjectAndLog (C:\Users\Malik Ijaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:45:9)
+    at async promptAndCreateNewProject (C:\Users\Malik Ijaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:32:12)
+    at async doSetup (C:\Users\Malik Ijaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+    at async init (C:\Users\Malik Ijaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:41:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
